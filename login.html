@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="user.css">
-    <title>Document</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/user.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <header id="header">
+            <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="collapse navbar-collapse navbar-right">
+                        <ul class="nav navbar-nav">
+                            <li class="scroll active">
+                                <a href="login.html">login/signup</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--/.container-->
+            </nav>
+            <!--/nav-->
+        </header>
+        <!--/header-->
 
-    <div class="wrap">
-        <div class="user">
-            <h2>로그인</h2>
-            <div class="login_id">
-                <h4>ID</h4>
-                <input type="ID" name="" id="" placeholder="아이디">
-            </div>
-            <div class="login_pw">
-                <h4>Password</h4>
-                <input type="password" name="" id="" placeholder="비밀번호">
-            </div>
-            <div class="login_etc">
-                <div class="checkbox">
-                <a href="join.html">회원가입</a>
+        <div class="wrap">
+            <div class="user">
+                <h2>로그인</h2>
+                <div class="login_id">
+                    <h4>ID</h4>
+                    <input type="ID" name="" id="" placeholder="아이디">
                 </div>
-                <div class="forgot_pw">
-                <a href="idpwfind.html">아이디/비밀번호 찾기</a>
+                <div class="login_pw">
+                    <h4>Password</h4>
+                    <input type="password" name="" id="" placeholder="비밀번호">
                 </div>
-            </div>
-            <div class="submit">
-                <input type="submit" value="로그인">
+                <div class="login_etc">
+                    <div class="checkbox">
+                        <a href="join.html">회원가입</a>
+                    </div>
+                    <div class="forgot_pw">
+                        <a href="idpwfind.html">아이디/비밀번호 찾기</a>
+                    </div>
+                </div>
+                <div class="submit">
+                    <input type="submit" value="로그인">
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>

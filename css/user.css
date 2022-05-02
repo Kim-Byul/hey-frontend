@@ -1,0 +1,297 @@
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+li {
+  list-style: none;
+}
+img { border: 0; }
+
+/* header */
+
+#header {
+  width: 960px;
+  height: 160px;
+  margin: 0 auto;
+  position : relative;
+}
+
+
+
+
+.wrap {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(214, 214, 214);
+}
+
+.user {
+  width: 30%;
+  height: 600px;
+  background: whitesmoke;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  color: rgb(9, 114, 105);
+  font-size: 2em;
+}
+
+.login_id {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.login_id input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.login_pw {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.login_pw input {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.login_etc {
+  padding: 10px;
+  width: 80%;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.submit {
+  margin-top: 50px;
+  width: 80%;
+}
+.submit input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  background: #F0780A;
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+}
+
+/* ----- join ------- */ 
+
+.wrap_join{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(197, 197, 197, 0.534);
+}
+
+.user_join {
+  width: 30%;
+  height: 800px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.join_id {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.join_id input {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.join_pw {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.join_pw input {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.join_name {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.join_name input {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.join_date {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.join_date input {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.join_tel {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.join_tel input {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+}
+
+.join_gender {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.join_gender select {
+  width: 100%;
+  height: 30px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid lightgray;
+  outline: none;
+  }
+  
+/**/
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  
+  /* 숨기기 */
+  z-index: -1;
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+  z-index: 1000;
+  transition: all .5s;
+}
+
+.window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+  
+  /* 임시 지정 */
+  width: 100px;
+  height: 100px;
+  
+  /* 초기에 약간 아래에 배치 */
+  transform: translate(-50%, -40%);
+}
+
+.show .popup {
+  transform: translate(-50%, -50%);
+  transition: all .5s;
+}
+
+/* 노래 */
+
+#wrap{
+  width: 900px;
+  border : 1px solid red;
+  margin : 0 auto;
+  overflow: hidden;
+  padding-top: 10px;
+}
+
+.image1 {
+  width: 50%;
+  height: 100%;
+}
+
+/*.image2 {
+  width: 50%;
+  height: 100%;
+}
+
+
+article{
+  float: left;
+  margin-left: 10px;
+}
+*/

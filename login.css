@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
     box-sizing: border-box;
     font-family: "Noto Sans KR", sans-serif;
   }
@@ -20,13 +19,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.1);
+  }
+  .join_button{
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 600px;
   }
   
   .login {
-    width: 50%;
+    width: 30%;
     height: 600px;
-    background: white;
+    background: lightgray;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -46,7 +49,6 @@
   .login_sns li {
     padding: 0px 15px;
   }
-  
   .login_sns a {
     width: 50px;
     height: 50px;
@@ -55,23 +57,21 @@
     justify-content: center;
     padding: 10px;
     border-radius: 50px;
-    background: white;
+    background: lightgray;
     font-size: 20px;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4), -3px -3px 5px rgba(0, 0, 0, 0.1);
   }
-  
   .login_id {
     margin-top: 20px;
     width: 80%;
   }
-  
   .login_id input {
     width: 100%;
     height: 50px;
     border-radius: 30px;
     margin-top: 10px;
     padding: 0px 20px;
-    border: 1px solid lightgray;
+    border: 1px solid white;
     outline: none;
   }
   
@@ -86,7 +86,7 @@
     border-radius: 30px;
     margin-top: 10px;
     padding: 0px 20px;
-    border: 1px solid lightgray;
+    border: 1px solid white;
     outline: none;
   }
   
@@ -99,7 +99,6 @@
     align-items: center;
     font-weight: bold;
   }
-  
   .submit {
     margin-top: 50px;
     width: 80%;
@@ -111,7 +110,7 @@
     outline: none;
     border-radius: 40px;
     background: linear-gradient(to left, rgb(255, 77, 46), rgb(255, 155, 47));
-    color: white;
+    color: lightgray;
     font-size: 1.2em;
     letter-spacing: 2px;
   }

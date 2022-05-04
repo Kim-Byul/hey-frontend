@@ -1,74 +1,30 @@
 
 <!DOCTYPE html>
-<html lang="ko">
-  <head>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/53a8c415f1.js" crossorigin="anonymous"></script>
+                <!-- Bootstrap CSS -->
+                <link rel="stylesheet" href="css/bootstrap.min.css">
+                <!-- Style -->
     
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>아이디 찾기</title>
-    <style>
-        @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
-	
-	html {
-		height: 100%;
-	}
-	
-	body {
-	    width:100%;
-	    height:100%;
-	    margin: 0;
-  		padding-top: 200px;
-  		padding-bottom: 40px;
-  		font-family: "Nanum Gothic", arial, helvetica, sans-serif;
-  		background-repeat: no-repeat;
-	}
-	
-    .card {
-        margin: 0 auto; /* Added */
-        float: none; /* Added */
-        margin-bottom: 10px; /* Added */
-	}
+    <link rel="stylesheet" href="./find.css">
+    <link rel="stylesheet" href="./header.css">
+	<link rel="stylesheet" href="./find.js">
+</head>
+<body>
 
-    #btn-Yes{
-        background-color: #e4932b;
-        border: none;
-    }
-	
-	.form-signin .form-control {
-  		position: relative;
-  		height: auto;
-  		-webkit-box-sizing: border-box;
-     	-moz-box-sizing: border-box;
-        	 box-sizing: border-box;
-  		padding: 10px;
-  		font-size: 16px;
-	}
- 
-    .card-title{
-        margin-left: 30px;
-    }
-
-
-    a{ 
-    	color: #f58b34; text-decoration: none; 
-    }
-
-    .links{
-        text-align: center;
-        margin-bottom: 10px;
-    }
-    
-    .checks{
-    	color : red;
-    }
-    </style>
+    <header id="header">
+        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                </div>
+    </header><!--/header-->
+	<title>비밀번호 찾기</title>
   </head>
    
   <body cellpadding="0" cellspacing="0" marginleft="0" margintop="0" width="100%" height="100%" align="center">
@@ -97,38 +53,5 @@
   
   </body>
     <script type="text/javascript">
-
-	
-	  	//아이디 정규식
-		var idJ = /^[a-z0-9]{5,20}$/;
-		
-  		$("#member_id").focusout(function(){
-	     if($('#member_id').val() == ""){
-	   		$('#checks').text('아이디를 입력해주세요.');
-	   	  	$('#checks').css('color', 'red');
-	     }
-	     });
-  		
-  		$("#member_id").focusout(function(){
-  			if(!idJ.test($(this).val())){
-  			$('#checks').text('5~20자의 영문 소문자, 숫자만 사용가능합니다');
-  			$('#checks').css('color', 'red');
-  		}
-  		 });
-  		
-  		$("#name").focusout(function(){
-	     if($('#name').val() == ""){
-	   		$('#checks').text('이름을 입력해주세요.');
-	   	  	$('#checks').css('color', 'red');
-	     }
-	     });
-	     
-  		$("#email").focusout(function(){
-	     if($('#email').val() == ""){
-	   		$('#checks').text('이메일을 입력해주세요');
-	   	  	$('#checks').css('color', 'red');
-	     }
-	     });
-  
   </script>
 </html>

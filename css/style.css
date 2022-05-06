@@ -1,0 +1,185 @@
+/***********************
+********* playlist ******
+************************/
+
+
+body{
+
+  font-family: 'Roboto', sans-serif;
+}
+
+#myProgress {
+  width: 420px;
+   background-color: #ffffff; 
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#myBar {
+  width: 0%;
+  height: 5px;
+  background-color: #ffc266;
+  border-radius: 10px;
+}
+
+.logo {
+  fill: red;
+}
+
+.btn-action{
+  cursor: pointer;
+  padding-top: 10px;
+  width: 30px;
+}
+
+.btn-ctn, .infos-ctn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.infos-ctn{
+padding-top: 20px;
+}
+
+.btn-ctn > div {
+ padding: 5px;
+ margin-top: 18px;
+ margin-bottom: 18px;
+}
+
+.infos-ctn > div {
+ margin-bottom: 8px;
+ color: rgb(249, 105, 14);
+}
+
+.first-btn{
+  margin-left: 3px;
+}
+
+.duration{
+  margin-left: 10px;
+}
+
+.title{
+  margin-left: 10px;
+  width: 210px;
+  text-align: center;
+}
+
+.player-ctn{
+  border-radius: 15px;
+  width: 420px;
+  padding: 10px;
+  background-color: #f6e8ce;
+  margin:auto;
+  margin-top: 100px;
+}
+
+.playlist-track-ctn{
+  display: flex;
+  background-color: #ffffff;
+  margin-top: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/*.playlist-track-ctn:last-child{
+  border: 1px solid rgb(249, 105, 14);
+}*/
+
+.playlist-track-ctn > div{
+  margin:10px;
+}
+.playlist-info-track{
+  width: 80%;
+}
+.playlist-info-track,.playlist-duration{
+  padding-top: 7px;
+  padding-bottom: 7px;
+  color: #e9cc95;
+  font-size: 14px;
+  pointer-events: none;
+}
+.playlist-ctn{
+   padding-bottom: 20px;
+}
+.active-track{
+  color: rgb(249, 105, 14)!important;
+  font-weight: bold;
+}
+
+.active-track > .playlist-info-track,.active-track >.playlist-duration,.active-track > .playlist-btn-play{
+  color: rgb(249, 105, 14) !important;
+}
+
+
+.playlist-btn-play{
+  pointer-events: none;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.fas{
+  color: #ffc266;
+  font-size: 20px;
+}
+
+
+/***********************
+******* hamburger ******
+************************/
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.menu-trigger,
+.menu-trigger span {
+  display: inline-block;
+  transition: all 0.4s;
+  box-sizing: border-box;
+}
+
+.menu-trigger {
+  position: relative;
+  width: 50px;
+  height: 44px;
+}
+
+.menu-trigger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  top: 20px;
+}
+
+.menu-trigger span:nth-of-type(3) {
+  bottom: 0;
+}
+
+/* 2th bar 사라지고,  1st 3rd bar 회전하며 X  */
+
+.menu-trigger.active-1 span:nth-of-type(1) {
+  transform: translateY(20px) rotate(-45deg);
+}
+
+.menu-trigger.active-1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu-trigger.active-1 span:nth-of-type(3) {
+  transform: translateY(-20px) rotate(45deg);
+}
+

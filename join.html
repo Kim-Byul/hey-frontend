@@ -22,8 +22,8 @@
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
                 </div>
     </header><!--/header-->
-
-    </html><div class="wrap wd668">
+    </html>
+    <div class="wrap wd668">
         <div class="container">
           <div class="form_txtInput">
             <h2 class="sub_tit_txt">회원가입</h2>
@@ -34,41 +34,62 @@
                   <col width="auto"/>
                 </colgroup>
                 <tbody>
+                 
                   <tr>
-                    <th><span>아이디</span></th>
-                    <td><input type="text" placeholder="ID 를 입력하세요."></td>
-                  </tr>
-                  <tr>
-                    <th><span>이름</span></th>
-                    <td><input type="text" placeholder=""></td>
-                  </tr>
-                  <tr>
-                    <th><span>비밀번호</span></th>
-                    <td><input type="text" placeholder="비밀번호를 입력해주세요."></td>
-                  </tr>
-                  <tr>
-                    <th><span>비밀번호 확인</span></th>
-                    <td><input type="text" placeholder="비밀번호를 확인하세요"></td>
-                  </tr>
-                  <tr>
-                    <th><span>휴대폰 번호</span></th>
-                    <td><input type="text" placeholder="ID 를 입력하세요."></td>
-                </tr>
-                <tr>
-                  <td>성별<input type="radio" name="gender" value="남" class="gender"> 남성
-                  <input type="radio" name="gender" value="여" class="gender">여성</td>
-                </tr>
-                </tbody>
-              </table>
-              </div>
+                    <th>아이디</th>
+                    <td><input id="id" name="id" type="text" value="" placeholder="아이디" >
+                      <img id="img-email" src="/assets/images/check.png" style="display:none;"></td>
+                      <td><div class="btn_id">
+                        <input type="button"  id = "idcheck-button"  value="ID중복체크">
+                      </div>
+                      </td>
+                    </tr>
+                 
+                    <tr>
+                      <th>비밀번호</th>
+                        <td><input id = "signup-pww" name="password" type="password" placeholder="!,@,#,$,% 특수문자 포함" value="" onchange="check_pw()"></td>
+                        <td><span id="check1"></span></td>
+                      </tr>
+
+                      <tr>
+                        <th>비밀번호 확인</th>
+                        <td><input id = "signup-pww2" name="password" type="password" placeholder="비밀번호를 확인하세요" onchange="check_pw()"></td>
+                        <td><span id="check"></span></td>
+                      </tr>
+
+                      <tr>
+                        <th>이름</th>
+                        <td><input id="name" name="name" type="text" value="" placeholder="홍길동"></td>
+                         <tr>
+                        
+                      <tr>
+                        <th>성별</th>
+                        <td>
+                        <select name='gender'>
+                          <option value='' selected>-- 선택 --</option>
+                          <option value='female'>여자</option>
+                          <option value='male'>남자</option>
+                        </select>
+                        </td>
+                      </tr>
+
+                      <tr>
+		              	<th>휴대폰 번호</th>
+		              	<td><input id="phone_num" name="phone_num" type="text" value="" placeholder="010-1234-5678"></td>
+	                	</tr>
+			              </tbody>
+                  	</table>
+
+                    <div class="btn_wrap">
+                      <input type="submit"  id = "join-submit" id_check_result="fail"  value="가입하기">
+                      </div>
+  
+                    </form>
             </div>
-            <div class="btn_wrap">
-              <a href="javascript:;">회원가입</a>
-            </div>
-          </div> <!-- form_txtInput E -->
-        </div><!-- content E-->
-      </div> <!-- container E -->
+          </div> 
+        </div>
+      </div>
     
     </body>
 </html>
-
+{% endblock%}

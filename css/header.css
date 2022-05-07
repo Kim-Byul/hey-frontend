@@ -29,8 +29,13 @@ h6 {
   font-family: 'Raleway', sans-serif;
 }
 
+#our-team {
+  padding: 150px 0 10px;
+}
+
 .section-header {
-  margin-bottom: 50px;
+  /*margin-bottom: 50px;*/
+  margin-top: 100px;
 }
 .section-header p{
 text-align:center;

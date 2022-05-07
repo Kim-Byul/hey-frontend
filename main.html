@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +12,16 @@
             <!-- Style -->
             <link rel="stylesheet" href="css/header.css">
             <link rel="stylesheet" href="css/main.css">
+            <link rel=stylesheet href="css/style.css" media=all> 
 
             <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
 
             <!-- chart.js-->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+      
 </head>
 
 <body>
@@ -48,122 +53,157 @@
                     노래를 선택하세요
                 </h2>
                 <P>감정분석이 필요한 노래를 선택해주세요</P>
+            </div>
+            
+            <div id="my_modal">
+                <table class="table custom-table">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col"></th>
+                            <th scope="col">가수</th>
+                            <th scope="col">노래</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row">
+                            <th scope="row">
+                                <label class="control control--checkbox">
+                                    <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </th>
+                            <td>1</td>
+                            <td>James Yates</td>
+                            <td>
+                                Web Designer
+                                <small class="d-block">Far far away</small>
+                            </td>
+                        </tr>
 
-
-                <!-- 모달창 -->
-                <div id="my_modal">
-                    <table class="table custom-table">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col"></th>
-                                <th scope="col">가수</th>
-                                <th scope="col">노래</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr scope="row">
-                                <th scope="row">
-                                    <label class="control control--checkbox">
-                                        <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-                                        <div class="control__indicator"></div>
-                                    </label>
-                                </th>
-                                <td>1</td>
-                                <td>James Yates</td>
-                                <td>
-                                    Web Designer
-                                    <small class="d-block">Far far away</small>
-                                </td>
-                            </tr>
+                        <tr class="spacer">
+                            <td colspan="100"></td>
+                        </tr>
+                            <th scope="row">
+                                <label class="control control--checkbox">
+                                    <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </th>
+                            <td>2</td>
+                            <td>Matthew Wasil</td>
+                            <td>
+                                Graphic Designer
+                                <small class="d-block">Far far away</small>
+                            </td>
 
                             <tr class="spacer">
                                 <td colspan="100"></td>
                             </tr>
+                            <tr>
                                 <th scope="row">
                                     <label class="control control--checkbox">
                                         <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
                                         <div class="control__indicator"></div>
                                     </label>
                                 </th>
-                                <td>2</td>
-                                <td>Matthew Wasil</td>
+                                <td>3</td>
+                                <td>Sampson</td>
                                 <td>
-                                    Graphic Designer
-                                    <small class="d-block">Far far away</small>
+                                    Mobile Dev
+                                    <small class="d-block">Far far away, behind the word mountains</small>
                                 </td>
+                            </tr>
 
-                                <tr class="spacer">
-                                    <td colspan="100"></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">
-                                        <label class="control control--checkbox">
-                                            <input type="checkbox" name="song" onclick='checkOnlyOne(this)'/>
-                                            <div class="control__indicator"></div>
-                                        </label>
-                                    </th>
-                                    <td>3</td>
-                                    <td>Sampson</td>
-                                    <td>
-                                        Mobile Dev
-                                        <small class="d-block">Far far away, behind the word mountains</small>
-                                    </td>
-                                </tr>
-
-                            </table>
-                            <button type="submit">선택</button>
-                            <a class="modal_close_btn">닫기</a>
-                        </div>
-                        <!-- 모달창 -->
+                        </table>
+                        <button type="submit">선택</button>
+                        <a class="modal_close_btn">닫기</a>
                     </div>
-                </section>
+                    <!-- 모달창 -->
 
-
-
-                    <!-- 노래매칭 -->
-                <div class="modal_btn">
-                    <button id ="popup_open_btn">노래선택</button>
+                <!-- 노래매칭 -->
+                <div class="matching-song">
+                   <table>
+                       <tr>
+                            <td><img src="images/IU.jpg" alt="선택한노래" width="300" height="300"></td>
+                            <td rowspan="3">
+                            <ul>
+                                <li><button id="popup_open_btn" type="button">노래선택</button></li>
+                                <li><button id="popup_open_btn" type="submit"> 매칭 </button></li>
+                                <li><button id="popup_open_btn" type="submit">담기</button></li>
+                            </ul>   
+                            </td>
+                             <td><img src="images/ANN.jpg" alt="결과노래" width="300" height="300"></td>
+                       </tr>
+                       <tr>
+                           <td><font size="5">가수</font></td>
+                           <td>가수</td>
+                        </tr>
+                        <tr>
+                            <td>제목</td>
+                            <td>제목</td>
+                        </tr>
+                   </table>
                 </div>
-
-                <main>      
-            <div class="matching_song">
-                <button id="matching" type="submit"> 매칭 </button>
-                    <div id="box1">
-                        <img src="images/IU.jpg" alt="선택한노래" width="300" height="300">
-                        <p>가수</p>
-                        <p>제목</p>
-                    </div>
-                    <div id="box2">
-                        <img src="images/ANN.jpg" alt="결과노래" width="300" height="300">
-                        <p>가수</p>
-                        <p>제목</p>
-                    </div>
-            </div>
-                </main>
+            </section>
                 
-         
-                    <div class="chart">
-                        <div class="section-header">
-                            <h2 class="section-title wow fadeInDown">감정분석결과</h2>
-                        </div>
-                            <div style="width: 500px; height: 500px;">
-                                <!-- chart1 -->
-                                <canvas id="myChart1"></canvas>
-                            </div>                        
-                            <div style="width: 500px; height: 500px;">
-                                <!-- chart2 -->
-                                <canvas id="myChart2"></canvas>
-                            </div>
-                    </div>
-             
 
+
+                    <div class="section-header">
+                        <h2 class="section-title wow fadeInDown">감정분석결과</h2>
+
+                          <div class="list-wrapper" id="">
+                            <table class="list-wrap">
+                                <thead>
+                                  <tr class="list-head">
+                                    <th class="check">선택</th>
+                                    <th class="rank">순위</th>
+                                    <th class="title">제목</th>
+                                    <th class="singer">가수</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="list">
+                                    <td class="check"></td>
+                                    <td class="rank">1</td>
+                                    <td class="title"></td>
+                                    <td class="singer"></td>
+                                  </tr>
+                                  <tr class="list">
+                                    <td class="check"></td>
+                                    <td class="rank">2</td>
+                                    <td class="title"></td>
+                                    <td class="singer"></td>
+                                  </tr>
+                                  <tr class="list">
+                                    <td class="check"></td>
+                                    <td class="rank">3</td>
+                                    <td class="title"></td>
+                                    <td class="singer"></td>
+                                  </tr>
+                                  <tr class="list">
+                                    <td class="check"></td>
+                                    <td class="rank">4</td>
+                                    <td class="title"></td>
+                                    <td class="singer"></td>
+                                  </tr>
+                                  <tr class="list">
+                                    <td class="check"></td>
+                                    <td class="rank">5</td>
+                                    <td class="title"></td>
+                                    <td class="singer"></td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                          </div>
+                    </div>                      
+        
+                           
                     <script>
                         function modal(id) {
                             var zIndex = 9999;
                             var modal = document.getElementById(id);
-
-                            // 모달 div 뒤에 레이어
+                            // 모달 div 뒤에 레이어         
                             var bg = document.createElement('div');
                             bg.setStyle({
                                 position: 'fixed',
@@ -224,62 +264,8 @@
                                 cb.checked = false;
                             })
                             element.checked = true;
-                        }
-
-                        
+                        }                 
                     </script>
-
-                            <script type="text/javascript">
-                                var context = document
-                                    .getElementById('myChart1')
-                                    .getContext('2d');
-                                var myChart = new Chart(context, {
-                                    type: 'pie', // 차트의 형태
-                                    data: { // 차트에 들어갈 데이터
-                                        labels: [
-                                            //x 축
-                                            '1','2','3','4','5',
-                                        ],
-                                        datasets: [
-                                            { //데이터
-                                                label: 'test1', //차트 제목
-                                                fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
-                                                data: [
-                                                    21,19,25,20,23 //x축 label에 대응되는 데이터 값
-                                                ],
-                                                backgroundColor: [
-                                                    //색상
-                                                    'rgba(255, 99, 132, 0.2)',
-                                                    'rgba(54, 162, 235, 0.2)',
-                                                    'rgba(255, 206, 86, 0.2)',
-                                                    'rgba(75, 192, 192, 0.2)',
-                                                    'rgba(255, 159, 64, 0.2)'
-                                                ],
-                                                borderColor: [
-                                                    //경계선 색상
-                                                    'rgba(255, 99, 132, 1)',
-                                                    'rgba(54, 162, 235, 1)',
-                                                    'rgba(255, 206, 86, 1)',
-                                                    'rgba(75, 192, 192, 1)',
-                                                    'rgba(255, 159, 64, 1)'
-                                                ],
-                                                borderWidth: 1 //경계선 굵기
-                                            }
-                                        ]
-                                    },
-                                    options: {
-                                        scales: {
-                                            yAxes: [
-                                                {
-                                                    ticks: {
-                                                        beginAtZero: true
-                                                    }
-                                                }
-                                            ]
-                                        }
-                                    }
-                                });
-                            </script>
 
 <script type="text/javascript">
     var context = document
@@ -294,7 +280,7 @@
             ],
             datasets: [
                 { //데이터
-                    label: 'test1', //차트 제목
+                    label: 'test2', //차트 제목
                     fill: false, // line 형태일 때, 선 안쪽을 채우는지 안채우는지
                     data: [
                         21,19,25,20,23 //x축 label에 대응되는 데이터 값
@@ -315,27 +301,24 @@
                         'rgba(75, 192, 192, 1)',
                         'rgba(255, 159, 64, 1)'
                     ],
-                    borderWidth: 1 //경계선 굵기
+
                 }
             ]
         },
         options: {
             scales: {
-                yAxes: [
-                    {
+
                         ticks: {
                             beginAtZero: true
                         }
                     }
-                ]
+                
             }
         }
-    });
+    );
 </script>
-                            
+<script src="js/music.js"></script>
 
-                    
+</body>     
 
-
-</body>
 </html>

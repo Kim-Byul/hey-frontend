@@ -1,86 +1,6 @@
-/***********************
-********* 햄버거버튼 ******
-************************/
-
-.menu {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  max-width: 0;
-  transition: 0.5s ease;
-  z-index: 1;
-  background-color: #eee;
+*{
+  list-style: none;
 }
-
-.burger-icon {
-  cursor: pointer;
-  display: inline-block;
-  position: absolute;
-  z-index: 2;
-  padding: 8px 0;
-  top: 4px;
-  right: 4px;
-  user-select: none;
-  width: auto;
-  margin: 0;
-}
-
-.burger-icon .burger-sticks {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background .2s ease-out;
-  width: 18px;
-}
-
-.burger-icon .burger-sticks:before,
-.burger-icon .burger-sticks:after {
-  background: #333;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all .2s ease-out;
-  width: 100%;
-}
-
-.burger-icon .burger-sticks:before {
-  top: 5px;
-}
-
-.burger-icon .burger-sticks:after {
-  top: -5px;
-}
-
-.burger-check {
-  display: none;
-}
-
-.burger-check:checked~.menu {
-  max-width: 200px;
-}
-
-.burger-check:checked~.burger-icon .burger-sticks {
-  background: transparent;
-}
-
-.burger-check:checked~.burger-icon .burger-sticks:before {
-  transform: rotate(-45deg);
-}
-
-.burger-check:checked~.burger-icon .burger-sticks:after {
-  transform: rotate(45deg);
-}
-
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:before,
-.burger-check:checked~.burger-icon:not(.steps) .burger-sticks:after {
-  top: 0;
-}
-
-
-
 /***********************
 ********* 모달창 ******
 ************************/
@@ -110,15 +30,10 @@
 }
 
 
-
 /***********************
 ********* 모달버튼 ******
 ************************/
-.modal_btn{
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
+
 
 p {
   font-family: 'Lato', sans-serif;
@@ -214,40 +129,59 @@ button {
 ********* 노래매칭 ******
 ************************/
 
-main{
+
+.matching-song{
 	margin: 0 auto; /* auto 알아서 중앙으로 맞춰줌 */
 	padding: 20px 0 20px 0; 
 	width: 1250px;
 	height: 500px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
-#box1{
-	width: 300px;
-	height: 300px;
-	float: left;
-}
-#box2{
-	height: 300px;
-	float: right;
+
+.modal_btn{
+  align-items: center;
+  /*display: flex;*/
+  justify-content: center;
 }
 
 img {
   border-radius: 50px;
 }
 
-#matching {
-  margin : 125px 300px 125px 300px;
+table {
+  border-spacing: 30px;
+  text-align: center;
 }
+
+th, td {
+	padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    }
+
+table .list-wrap{
+  border-spacing: 10px;
+  text-align: center;
+}
+
+.list-head, .check, .rank, .title, .singer{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  }
+
 /***********************
-********* chart ******
+****** 차트 + list ******
 ************************/
 
 #chart{
-  padding: 100px 0 50px 0;
-}
-
-.chart_pie{
-  padding: 0 20px 0 50px;
+  padding: 150px 0 10px;
 }
 
 .chart{
@@ -257,10 +191,3 @@ img {
 	height: 1000px;
 }
 
-#myChart1{
-  float: left;
-}
-
-#myChart2{
-  float: right;
-}

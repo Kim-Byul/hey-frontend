@@ -1,0 +1,139 @@
+@import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
+* {margin:0;padding:0;}
+html {
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+.find {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 600px;
+  }
+
+  
+  .find_id {
+    width:900px;
+    height:px;
+    position:absolute;
+    left:30%;
+    top:25%;
+    margin-left:-50px;
+    margin-top:-50px;
+  }
+
+  .find.line{
+    border:1px solid #ececec;
+    padding:30px 20px;
+  }
+  .join_form{
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+.find_id_body {
+    width:100%;
+    height:100%;
+    margin: 0;
+      padding-top: 0px;
+      padding-bottom: 40px;
+      font-family: "Nanum Gothic", arial, helvetica, sans-serif;
+      background-repeat: no-repeat;
+      height:100%; 
+      font-family: 'Noto Sans KR';
+      
+}
+.find_pw body{
+	    width:100%;
+	    height:100%;
+	    margin: 0;
+  		padding-top: 200px;
+  		padding-bottom: 40px;
+  		font-family: "Nanum Gothic", arial, helvetica, sans-serif;
+  		background-repeat: no-repeat;
+          
+}
+
+.container{
+    width:80%;
+}
+.card {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 10px; /* Added */
+    
+}
+
+#btn-Yes{
+    background-color: #cc690c;
+    border: none;
+}
+
+.form-signin .form-control {
+      position: relative;
+      height: auto;
+      -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+         box-sizing: border-box;
+      padding: 10px;
+      font-size: 16px;
+}
+.card-title {
+    margin-top:30px;
+    color:#f58b34;
+}
+
+.card align-middle{
+    width:25rem;
+}
+
+.card-body {
+    width:100%;
+    height:100%;
+    background:#000;
+    position:relative;
+    background: lightgray;
+    border-radius: 20px;
+}
+.card-body.line{
+    border:1px solid #ececec;
+    padding:30px 20px;
+}
+
+.card-title{
+    margin-left: 30px;
+}
+ .links{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+a{ 
+    color: #f58b34; text-decoration: none; 
+}
+.text2{
+    color : blue;
+}
+
+.checks{
+    color : red;
+}
+
